@@ -317,8 +317,8 @@ nav{
     margin: 0;
 }
 
-.w-50 {
-    width: 50%;
+.w-50-md {
+    width: 100%;
 }
 
 
@@ -393,6 +393,10 @@ nav{
 
     .d-sm-none {
         display: inherit;
+    }
+
+    .w-50-md {
+        width: 100%;
     }
 }
 

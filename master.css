@@ -225,6 +225,14 @@ nav{
     flex-direction: column;
 }
 
+.card-solo {
+	height:100%;
+}
+
+.card-solo .img-wrapper-vertical {
+	height: calc(100% - 47px);
+}
+
 .card-content {
     padding: var(--main-padding);
     display: flex;
@@ -487,8 +495,12 @@ nav{
         flex-grow: 1;
     }
 
-    #activities .img-wrapper-vertical {
+	#activities .img-wrapper-vertical {
         height: 200px;
+    }
+
+    #activities .card-solo .img-wrapper-vertical {
+        height: calc(100% - 40px);
     }
 
     #footerWrapper {

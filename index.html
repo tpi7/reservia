@@ -3,26 +3,33 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Reservia - LOCAL</title>
-    <link rel="stylesheet" href="master.css" />
+    <title>Reservia</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/da7bc48d54.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/logo/Reservia.svg">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="master.css" />
 </head>
 
 <body>
     <header>
-        <div class="container">
+        <div class="container d-flex justify-content-between">
             <img src="images/logo/Reservia.svg" alt="logo.svg" id="logo" class="" />
-            <nav>
-                <ul id="nav-bar" class="navigation">
-                    <li><a href="#lodgings" class="nav-link nav-link-active">Hébergements</a></li>
-                    <li><a href="#activities" class="nav-link">Activités</a></li>
-                </ul>
-            </nav>
-            <a href="#" id="signup" class="nav-link">S'inscrire</a>
+            <div class="d-flex">
+                <nav>
+                    <ul id="nav-bar-pc" class="navigation d-lg">
+                        <li><a href="#lodgings" class="nav-link nav-link-active">Hébergements</a></li>
+                        <li><a href="#activities" class="nav-link">Activités</a></li>
+                    </ul>
+                </nav>
+                <a href="#" id="signup" class="nav-link t-bold">S'inscrire</a>
+            </div>
         </div>
+        <ul id="nav-bar" class="navigation d-lg-none">
+            <li class="w-50"><a href="#lodgings" class="nav-link nav-link-active">Hébergements</a></li>
+            <li class="w-50"><a href="#activities" class="nav-link">Activités</a></li>
+        </ul>
     </header>
 
     <main>
@@ -85,52 +92,58 @@
         <div class=" container-no-padding lodgings-container-responsive">
             <section id="popular" class="bg-main">
                 <div class="container">
-                    <h1>Les plus populaires</h1>
+                    <h1 class="d-flex flex-row justify-content-between">Les plus populaires <span class="d-inline"><i class="fas fa-chart-line d-inline"></i></span></h1>
                     <div class="cards-container">
                         <div class="card card-padding card-horizontal">
-                            <div class="img-wrapper img-wrapper-horizontal">
-                                <img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="popular.jpg">
-                            </div>
-                            <div class="card-content">
-                                <div>
-                                    <span class="t-bold">Hôtel le soleil du matin</span><br />
-                                    <span>Nuit à partir de <span class="t-bold">128€</span></span><br />
+                            <a href="#" class="card-link">
+                                <div class="img-wrapper img-wrapper-horizontal">
+                                    <img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="popular.jpg">
                                 </div>
-                                <span class="lodging-note"><i class="fas fa-star st-blue"></i><i
-                                    class="fas fa-star st-blue"></i><i class="fas fa-star st-blue"></i><i
-                                    class="fas fa-star st-blue"></i><i class="fas fa-star st-blue"></i>
-                                </span>
-                            </div>
+                                <div class="card-content">
+                                    <div>
+                                        <span class="t-bold">Hôtel le soleil du matin</span><br />
+                                        <span>Nuit à partir de <span class="t-bold">128€</span></span><br />
+                                    </div>
+                                    <span class="lodging-note"><i class="fas fa-star st-blue"></i><i
+                                        class="fas fa-star st-blue"></i><i class="fas fa-star st-blue"></i><i
+                                        class="fas fa-star st-blue"></i><i class="fas fa-star st-blue"></i>
+                                    </span>
+                                </div>
+                            </a>
                         </div>
                         <div class="card card-padding card-horizontal">
-                            <div class="img-wrapper img-wrapper-horizontal">
-                                <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="popular.jpg">
-                            </div>
-                            <div class="card-content">
-                                <div>
-                                    <span class="t-bold">Au coeur de l'eau Chambres d'hôtes</span><br />
-                                    <span>Nuit à partir de <span class="t-bold">71€</span></span><br />
+                            <a href="#" class="card-link">
+                                <div class="img-wrapper img-wrapper-horizontal">
+                                    <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="popular.jpg">
                                 </div>
-                                <span class="lodging-note"><i class="fas fa-star st-blue"></i><i
-                                    class="fas fa-star st-blue"></i><i class="fas fa-star st-blue"></i><i
-                                    class="fas fa-star st-blue"></i><i class="fas fa-star st-grey"></i>
-                                </span>
-                            </div>
+                                <div class="card-content">
+                                    <div>
+                                        <span class="t-bold">Au coeur de l'eau Chambres d'hôtes</span><br />
+                                        <span>Nuit à partir de <span class="t-bold">71€</span></span><br />
+                                    </div>
+                                    <span class="lodging-note"><i class="fas fa-star st-blue"></i><i
+                                        class="fas fa-star st-blue"></i><i class="fas fa-star st-blue"></i><i
+                                        class="fas fa-star st-blue"></i><i class="fas fa-star st-grey"></i>
+                                    </span>
+                                </div>
+                            </a>
                         </div>
                         <div class="card card-padding card-horizontal">
-                            <div class="img-wrapper img-wrapper-horizontal">
-                                <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="popular.jpg">
-                            </div>
-                            <div class="card-content">
-                                <div>
-                                    <span class="t-bold">Hôtel le soleil du matin</span><br />
-                                    <span>Nuit à partir de <span class="t-bold">68€</span></span><br />
+                            <a href="#" class="card-link">
+                                <div class="img-wrapper img-wrapper-horizontal">
+                                    <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="popular.jpg">
                                 </div>
-                                <span class="lodging-note"><i class="fas fa-star st-blue"></i><i
-                                    class="fas fa-star st-blue"></i><i class="fas fa-star st-blue"></i><i
-                                    class="fas fa-star st-blue"></i><i class="fas fa-star st-grey"></i>
-                                </span>
-                            </div>
+                                <div class="card-content">
+                                    <div>
+                                        <span class="t-bold">Hôtel le soleil du matin</span><br />
+                                        <span>Nuit à partir de <span class="t-bold">68€</span></span><br />
+                                    </div>
+                                    <span class="lodging-note"><i class="fas fa-star st-blue"></i><i
+                                        class="fas fa-star st-blue"></i><i class="fas fa-star st-blue"></i><i
+                                        class="fas fa-star st-blue"></i><i class="fas fa-star st-grey"></i>
+                                    </span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -239,18 +252,16 @@
             <div class="container">
                 <h1>Activités à Marseille</h1>
                 <div class="cards-container">
-                    <div class="cards-group-1">
-                        <div class="w-50-md">
-                            <div class="card card-vertical card-solo">
-                                <div class="img-wrapper img-wrapper-vertical">
-                                    <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="popular.jpg">
-                                </div>
-                                <div class="card-content">
-                                    <span class="t-bold">Vieux Port</span><br />
-                                </div>
+                    <div class="cards-group">
+                        <div class="card card-vertical card-solo">
+                            <div class="img-wrapper img-wrapper-vertical">
+                                <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="popular.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="t-bold">Vieux Port</span><br />
                             </div>
                         </div>
-                        <div class="w-50-md">
+                        <div class="d-flex flex-column justify-content-between">
                             <div class="card card-vertical">
                                 <div class="img-wrapper img-wrapper-vertical">
                                     <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="popular.jpg">
@@ -269,18 +280,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cards-group-2">
-                        <div class="w-50-md">
-                            <div class="card card-vertical">
-                                <div class="img-wrapper img-wrapper-vertical">
-                                    <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="popular.jpg">
-                                </div>
-                                <div class="card-content">
-                                    <span class="t-bold">Parc National des Calanques</span><br />
-                                </div>
+                    <div class="cards-group">
+                        <div class="card card-vertical card-solo">
+                            <div class="img-wrapper img-wrapper-vertical">
+                                <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="popular.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="t-bold">Parc National des Calanques</span><br />
                             </div>
                         </div>
-                        <div class="w-50-md">
+                        <div class="d-flex flex-column justify-content-between">
                             <div class="card card-vertical">
                                 <div class="img-wrapper img-wrapper-vertical">
                                     <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="popular.jpg">
@@ -298,7 +307,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

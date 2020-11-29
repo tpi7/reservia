@@ -17,6 +17,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     width: 100%;
@@ -27,12 +31,10 @@ body {
 }
 
 header {
-    font-weight: bold;
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 nav {
@@ -47,7 +49,6 @@ main {
 a {
     text-decoration: none;
     color: #000;
-    width: 100%;
 }
 
 ul {
@@ -63,6 +64,13 @@ ul li {
     padding: var(--main-padding);
 }
 
+header .container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .container-no-padding {
     padding: 0;
 }
@@ -73,16 +81,25 @@ ul li {
     display: flex;
 }
 
+.nav-bar {
+    width: 100%;
+}
+
 .nav-link {
     display: block;
     height: 40px;
     line-height: 40px;
     text-align: center;
     color: var(--primary);
+}
+
+.navigation .nav-link {
+    color: inherit;
     border-bottom: var(--border-nav-link);
 }
 
-.nav-link-active {
+.navigation .nav-link-active {
+    color: var(--primary);
     border-bottom: var(--border-nav-link-active);
 }
 
@@ -91,16 +108,15 @@ ul li {
 }
 
 #logo {
-    order: 1;
+
 }
 
 nav{
-    order: 3;
+
 }
 
 #signup {
     width: 150px;
-    order: 2;
 }
 
 
@@ -108,6 +124,7 @@ nav{
 /* Search bar */
 
 #searchbar {
+    margin-bottom: 1em;
     height: 40px;
     line-height: 40px;
     border-radius: 15px;
@@ -204,13 +221,20 @@ nav{
 /* Cartes */
 
 .card {
-    margin-top: 16px;
     border-radius: 15px;
     overflow: hidden;
     display: flex;
     background-color: #fff;
     -webkit-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+#lodgings .card, #popular .card {
+    margin-bottom: 20px;
+}
+
+.card-link {
+    display: flex;
 }
 
 .card-padding {
@@ -225,14 +249,6 @@ nav{
     flex-direction: column;
 }
 
-.card-solo {
-	height:100%;
-}
-
-.card-solo .img-wrapper-vertical {
-	height: calc(100% - 47px);
-}
-
 .card-content {
     padding: var(--main-padding);
     display: flex;
@@ -244,11 +260,22 @@ nav{
     display: inline;
 }
 
-/* Lodgings container */
-
 .lodgings-container-responsive {
     display: flex;
     flex-direction: column;
+}
+
+#activities {
+    margin-bottom: 20px;
+}
+
+#activities .card {
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+#activities .img-wrapper-vertical {
+	height: calc(100% - 47px);
 }
 
 /* Footer */
@@ -293,6 +320,18 @@ nav{
     display: flex;
 }
 
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
 .d-inline {
     display: inline;
 }
@@ -321,11 +360,27 @@ nav{
     display: none;
 }
 
+.d-lg {
+    display: none;
+}
+
+.d-lg-none {
+    display: inherit;
+}
+
 .m-0 {
     margin: 0;
 }
 
+.w-50 {
+    width: 50%;
+}
+
 .w-50-md {
+    width: 100%;
+}
+
+.w-100 {
     width: 100%;
 }
 
@@ -388,13 +443,37 @@ nav{
 }
 
 /* -----RESPONSIVE----- */
-/* Small devices (landscape phones, 576px and up) */
-@media screen and (min-width: 576px) {
-
-}
 
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+        margin: auto;
+    }
+
+    .container-no-padding {
+        width: 768px;
+        margin: auto;
+    }
+
+    header .container {
+        width: 768px;
+        margin: auto;
+    }
+
+    .nav-link {
+        width: 200px;
+        border-bottom: none;
+    }
+
+    .navigation .nav-link {
+        border-bottom: none;
+    }
+
+    .navigation .nav-link-active {
+        border-top: var(--border-nav-link-active);
+    }
+
     .d-sm {
         display: none;
     }
@@ -403,8 +482,63 @@ nav{
         display: inherit;
     }
 
+    .d-lg {
+        display: inherit;
+    }
+
+    .d-lg-none {
+        display: none;
+    }
+
     .w-50-md {
         width: 100%;
+    }
+
+    #activities .cards-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #activities .cards-group-1 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #activities .cards-group-2 {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #activities .cards-group {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #activities .cards-group:nth-child(1) {
+        margin-bottom: 20px;
+    }
+
+    #activities .cards-group:nth-child(2) {
+        flex-direction: row-reverse;
+    }
+
+    #activities .cards-group > div {
+        width: 48%;
+    }
+
+    #activities .card {
+        height: 48%;
+        margin-bottom: 0;
+    }
+
+    #activities .card-solo {
+        height: 100%;
     }
 }
 
@@ -418,6 +552,10 @@ nav{
     .container-no-padding {
         width: 992px;
         margin: auto;
+    }
+
+    header .container {
+        width: 992px;
     }
 
     .lodgings-container-responsive {
@@ -438,7 +576,6 @@ nav{
     }
 
     #lodgings .cards-container {
-        margin-bottom: 20px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -469,38 +606,13 @@ nav{
         margin-top: 0;
     }
 
-    #activities {
-
-    }
-
-    #activities .cards-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #activities .cards-group-1 {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-    }
-
-    #activities .cards-group-2 {
-        width: 100%;
-        display: flex;
-        flex-direction: row-reverse;
-    }
-
     #activities .card {
         width: 100%;
-        flex-grow: 1;
+        justify-content: flex-end;
     }
 
 	#activities .img-wrapper-vertical {
-        height: 200px;
-    }
-
-    #activities .card-solo .img-wrapper-vertical {
-        height: calc(100% - 40px);
+        height: 100%;
     }
 
     #footerWrapper {
@@ -520,24 +632,29 @@ nav{
         margin: auto;
     }
 
+    header .container {
+        width: 1200px;
+    }
+
     #activities .cards-container {
         display: flex;
         flex-direction: row;
         height: 500px;
+        justify-content: space-between;
     }
 
-    #activities .cards-group-1 {
-        width: 50%;
-        margin-right: 20px;
+    #activities .cards-group {
+        width: 48%;
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #activities .cards-group:nth-child(2) {
         flex-direction: row;
     }
 
-    #activities .cards-group-2 {
-        width: 50%;
-        margin-left: 20px;
-        display: flex;
-        flex-direction: row;
+    #activities .cards-group > div {
+        width: 46%;
     }
-
 }

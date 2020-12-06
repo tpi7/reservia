@@ -145,7 +145,7 @@ nav{
     font-weight: 600;
 }
 
-#searchButton {
+#searchButton, #searchButtonPc {
     border: none;
     border-radius: 0 15px 15px 0;
     height: 40px;
@@ -370,6 +370,10 @@ nav{
 
 .m-0 {
     margin: 0;
+}
+
+.mr-1 {
+	padding-right: 1em;
 }
 
 .w-50 {

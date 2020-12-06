@@ -14,8 +14,8 @@
 
 <body>
 	<header>
-		<div class="container d-flex justify-content-between">
-			<img src="images/logo/Reservia.svg" alt="logo.svg" id="logo" class="" />
+		<div class="container d-flex justify-content-between pt-0">
+			<img src="images/logo/Reservia.svg" alt="logo.svg" id="logo" />
 			<div class="d-flex">
 				<nav>
 					<ul id="nav-bar-pc" class="navigation d-lg">
@@ -45,9 +45,11 @@
 					<i class="fas fa-map-marker-alt"></i>
 				</div>
 				<input id="searchField" class="t-bold" value="Marseille, France" />
+                <!-- Version mobile, s'affiche par défaut -->
 				<button id="searchButton" class="d-sm t-bold icon-wrapper icon-wrapper-md t-center">
 					<i class="fas fa-search"></i>
 				</button>
+                <!-- Version pc, s'affiche sur les écrans dont la largeur est supérieure ou égale à 768px -->
 				<button id="searchButtonPc" class="d-sm-none t-bold">
 					<span>Rechercher</span>
 				</button>

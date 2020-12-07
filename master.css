@@ -229,6 +229,10 @@ nav{
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
 }
 
+.card:hover {
+    cursor: pointer;
+}
+
 #lodgings .card, #popular .card {
     margin-bottom: 20px;
 }

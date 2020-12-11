@@ -132,12 +132,12 @@ nav{
     flex-direction: row;
 }
 
-.fa-map-marker-alt {
-
-}
-
 #searchField {
-    border: none;
+    padding-left: 10px;
+    border-top: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey);
+    border-left: none;
+    border-right: none;
     height: 40px;
     line-height: 40px;
     background-color: transparent;
@@ -415,6 +415,7 @@ nav{
 #map-marker {
     background-color: var(--grey);
     border-radius: 15px 0 0 15px;
+    margin-right: 0;
 }
 
 .img-wrapper {

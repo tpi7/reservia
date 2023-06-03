@@ -1,4 +1,5 @@
-# OC-WD-Project-1
+# Reservia
 Projet réalisé dans le cadre du parcours Développeur Web d'OpenClassrooms.
+Début : 2020-10-24
 
-[Lien vers le projet](https://thibaultp7.github.io/ThibaultParodi_2_24102020/)
+[Lien vers le projet](https://tpi7.github.io/reservia/)
